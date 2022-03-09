@@ -59,6 +59,32 @@ router.post('/update/:id',function (req,res,next) {
     res.redirect("/contact")
     
 })
+//search 
+router.post('/search', function (req, res, next) {
+    console.log( req.body.Search)
+    Contact.find(function (err, data1) {
+        if (err) throw err;
+        let data = [];
+        if (req.body.Search == "") {
+            res.redirect('/contact');
+        } else {
+            data1.forEach(element => {
+                if (req.body.Search == element.FullName) {
+
+                    data.push(element)
+                    console.log("dataa est : " + data)
+                }
+
+            });
+        }
+        if (data == null) {
+            res.render('getAllContacts.twig', { data1 });
+        } else {
+            res.render('getAllContacts.twig', { data });
+        }
+       
+    });
+});
 
 
 
