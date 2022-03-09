@@ -78,9 +78,9 @@ router.post('/search', function (req, res, next) {
             });
         }
         if (data == null) {
-            res.render('getAllContacts.twig', { data1 });
+            res.render('getAllContact.twig', { data1 });
         } else {
-            res.render('getAllContacts.twig', { data });
+            res.render('getAllContact.twig', { data });
         }
        
     });
