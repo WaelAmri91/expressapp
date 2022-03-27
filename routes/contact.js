@@ -24,7 +24,7 @@ router.post('/addAction', function(req, res, next) {
         }
     )
     contact.save();
-    res.redirect('/contact')
+    res.redirect('/contact/')
 
 });
 //Delete contact
