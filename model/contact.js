@@ -7,4 +7,4 @@ var Contact = new Schema({
     Phone : Number
 });
 
-module.exports = mongoose.model('contacts', Contact);
+module.exports = mongoose.model('contacts', Contact); 

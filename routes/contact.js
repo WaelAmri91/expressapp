@@ -24,7 +24,7 @@ router.post('/addAction', function(req, res, next) {
         }
     )
     contact.save();
-    res.redirect('/contact/')
+    res.redirect('/contact/   ')
 
 });
 //Delete contact
@@ -42,7 +42,7 @@ router.get('/update/:id', function(req, res, next) {
     var id = req.params.id;
 
     Contact.findById({_id:id}, (err,data)=>{
-        if(err) throw err ;
+        if(err) throw err ; 
         res.render('updateContact.twig',{data})
     })
 });
